@@ -1,0 +1,83 @@
+body{
+margin :0px auto;
+width:980px;
+padding:0px 15px;
+background:#2E2E2E;
+}
+
+#about{
+padding: 10px 10px;
+}
+
+#mainWrapper{
+background: #DEDEDE;
+width:980px;
+height:600px;
+margin-top:-20px;
+}
+#loginWrapper{
+background: #CECECE;
+height:600px;
+width: 313px;
+padding-left: 20px;
+}
+
+#registerWrapper{
+    margin-left: 30px;
+    width: 200px;
+}
+#tubiconWrapper{
+    margin-left: 104px;   
+    padding-top: 100px;
+}
+
+#logout{
+float:right;
+}
+
+#search{
+padding:10px 10px;
+background: #EEEEEE;
+width:400px;
+margin :0px auto;
+margin-top: -20px;
+}
+
+#searchwrapper{
+    background: #DEDEDE;
+}
+
+#loginWrapper{
+padding-top: 20px;
+}
+
+
+#rolltext{
+background:#000;
+opacity:0.5;
+color:#FFF;
+font-weight:bold;
+}
+
+a{
+text-decoration:none;
+}
+
+
+
+#newuser{
+padding:10px 10px;
+background: #DEDEDE;
+width: 600px;
+}
+
+#newuserleft{
+    float:left;
+    width: 250px;
+    margin-left: 30px;
+}
+
+#newuserright{
+    float:left;
+    width: 200px;
+}
