@@ -46,8 +46,8 @@ $(document).ready(function(){
       
        $.post("loginuser.php",{txtemailid:txtemailid,txtpassword:txtpassword},
        function(data){
-          if(data == 1){
-            loggedIn();
+          if(data == "1"){
+            window.location = "uploadproject.php";
            }
            else
                {
@@ -65,5 +65,26 @@ $(document).ready(function(){
         $.post("logoutuser.php");
         window.location.replace("http://localhost/projecttub");
 
+   });
+   
+   $("#uploadproject").click(function(){
+     
+       var fname = $("#projectfile").val();
+       var ext = fname.substring(fname.lastIndexOf('.', fname.length)+1,fname.length);
+       if(ext != "zip"){
+           $("#alertproject").html("<strong>Invalid Project File!</strong>  Please upload only .zip file.");
+           $("#alertproject").css("display","block");
+           $("#alertproject").hide();
+           $("#alertproject").fadeIn(800);
+           $("#projectfile").attr('class','alert alert-danger');
+       }
+       else{          
+           $("#alertproject").html("A Valid Project File.");
+           $("#alertproject").css("display","block");
+           $("#alertproject").hide();
+           $("#alertproject").fadeIn(800);
+           $("#projectfile").attr('class','');
+       }
+       return false;
    });
 });

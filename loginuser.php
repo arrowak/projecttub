@@ -1,4 +1,5 @@
 <?php
+session_start();
 /* 
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -8,7 +9,7 @@ $password = $_POST["txtpassword"];
 
 $server = "localhost:3306";
 $username = "root";
-$pass = "";
+$pass = "admin";
 $database = "projecttub";
 
 try {
