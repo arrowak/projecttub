@@ -88,3 +88,9 @@ input{
 footer{
     color:#FFF;
 }
+
+
+.uploadProjectWrapper{
+    padding: 50px 50px;
+    background: #FFF;
+}
