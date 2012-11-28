@@ -26,13 +26,13 @@ and open the template in the editor.
     <label>Year of joining the course</label>
     <input type="text" id="yearofjoining" placeholder="year of joining the course">
     <br><br>
-    <input type="checkbox" id="iagree"> I agree for the terms and conditions</input>
+    <input type="checkbox" id="iagree"> I agree for the terms and conditions
     <br><br>
     <button class="btn btn-primary" id="register">Register</button>
-   
+     <br>
+    <br>
     
-    
-<div id="alert" class="alert" style="display:none;">
+<div id="alert" class="alert alert-info" style="display:none;">
  
 </div>
 </div> <!-- End newusercontent div -->

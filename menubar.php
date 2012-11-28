@@ -8,10 +8,12 @@
                   </a>
                   <a class="brand" href="index.php">Main Tub</a>
                   <div class="nav-collapse collapse navbar-inverse-collapse">
-                    <ul class="nav">
-                   
+                    <ul class="nav">                   
                       <li class="active"><a href="#">Home</a></li>
                       
+                    </ul>
+                      <ul class="nav" id="logout" style="display: none;">
+                      <li class=""><a href="#">Logout</a></li>
                     </ul>
 		
                   </div><!-- /.nav-collapse -->
