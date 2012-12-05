@@ -2,8 +2,9 @@
     session_start();
     
     if(isset($_SESSION['username'])){
-        header("http://localhost/projecttub/uploadproject.php");
+        header('Location: uploadproject.php');
     }
+    else{
 ?>
 
 <html>
@@ -32,3 +33,6 @@
 </body>
 <footer> &COPY; Copyright 2012-2013, www.projecttub.com , All rights reserved. </footer>
 </html>
+<?php
+    }
+?>

@@ -70,21 +70,43 @@ $(document).ready(function(){
    $("#uploadproject").click(function(){
      
        var fname = $("#projectfile").val();
+       var projectname = $("#name").val();
+       var snap1 = $("#snapshot1").val();
        var ext = fname.substring(fname.lastIndexOf('.', fname.length)+1,fname.length);
-       if(ext != "zip"){
-           $("#alertproject").html("<strong>Invalid Project File!</strong>  Please upload only .zip file.");
+       if(projectname == "")
+       {
+           $("#alertproject").attr("class","alert alert-danger");
+           $("#alertproject").html("<strong>Invalid Project Name!</strong> &nbsp;&nbsp;Please give your project a name.");
            $("#alertproject").css("display","block");
            $("#alertproject").hide();
            $("#alertproject").fadeIn(800);
-           $("#projectfile").attr('class','alert alert-danger');
+          
        }
-       else{          
-           $("#alertproject").html("A Valid Project File.");
+       else if(ext != "zip"){
+           $("#alertproject").attr("class","alert alert-danger");
+           $("#alertproject").html("<strong>Invalid Project File!</strong> &nbsp;&nbsp;Please upload only .zip file.");
            $("#alertproject").css("display","block");
            $("#alertproject").hide();
            $("#alertproject").fadeIn(800);
-           $("#projectfile").attr('class','');
+          // $("#projectfile").attr('class','alert alert-danger');
        }
+       else if(snap1 == ""){
+                 $("#alertproject").attr("class","alert alert-danger");
+                 $("#alertproject").html("<strong>Invalid Snapshot File!</strong> &nbsp;&nbsp;Please upload atleast one snapshot.");
+                $("#alertproject").css("display","block");
+                $("#alertproject").hide();
+                $("#alertproject").fadeIn(800);               
+           }
+      else{
+                $("#alertproject").attr("class","alert alert-success");
+                $("#alertproject").html("<strong> Thank You! </strong> &nbsp;&nbsp; Your project is being created. Please wait...");
+                $("#alertproject").css("display","block");
+                $("#alertproject").hide();
+                $("#alertproject").fadeIn(800);
+                $("#loader").css("display","block").fadeIn(800);
+          // $("#projectfile").attr('class','');
+      }
+       
        return false;
    });
 });

@@ -18,8 +18,8 @@
   <fieldset>
     <legend>New Project</legend><br>
     <div id="newprojectcontent" class="well">
-
-     <label>Name</label>
+      <div id="uploadProjectLeft" class="span4">
+     <label><span style="color:red;"><sup>* </sup></span>Name</label>
      <input type="text" id="name" placeholder="project name">
      <br><br>
      <label>Category</label>
@@ -28,18 +28,25 @@
         <option value="web">Web Application</option>
      </select>
      <br><br>
-        <label>Project File (Please upload a .zip file)</label>
-        <input type="file" accept="application/zip" id="projectfile" placeholder="Choose a zip file">
-     <br><br>
-     <label>Snapshots</label>
+        <label><span style="color:red;"><sup>* </sup></span>Project File (.zip)</label>
+        <input type="file" accept="application/zip" id="projectfile" value="Choose a zip file" placeholder="Choose a zip file">
+     </div> <!-- End UploadProjectLeft div -->
+     <div id="uploadProjectCenter" class="span2">
+          <br><br>  <br><br> <br><br>
+          <button class="btn btn-primary" id="uploadproject">Upload</button><br>
+          <img src='img/uploading.gif'style="display:none;margin-top:10px;margin-left: -25px;" id="loader"/>
+     </div><!-- End UploadProjectCenter div -->
+     <div id="uploadProjectRight" class="span4" >
+     <label><span style="color:red;"><sup>* </sup></span>Snapshots</label>
+     <br>
      <input type="file" accept="image/*" id="snapshot1" placeholder="Choose a file">
-        <input type="file" accept="image/*" id="snapshot2" placeholder="Choose a file">
-        <input type="file" accept="image/*" id="snapshot3" placeholder="Choose a file">    
      <br><br>
-        <button class="btn btn-primary" id="uploadproject">Upload</button><br><br><br>
-     <div id="alertproject" class="alert alert-danger" style="display:none;">
-
-     </div>
+        <input type="file" accept="image/*" id="snapshot2" placeholder="Choose a file">
+     <br><br>
+        <input type="file" accept="image/*" id="snapshot3" placeholder="Choose a file">   
+     </div> <!-- End UploadProjectRight div -->  
+       <div id="alertproject" class="" style="display:none;margin-top: 300px;">
+          </div>
     </div> <!-- End newusercontent div -->
    </fieldset>
 </form>
