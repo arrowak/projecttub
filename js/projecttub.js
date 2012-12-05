@@ -99,7 +99,7 @@ $(document).ready(function(){
            }
       else{
                 $("#alertproject").attr("class","alert alert-success");
-                $("#alertproject").html("<strong> Thank You! </strong> &nbsp;&nbsp; Your project is being created. Please wait...");
+                $("#alertproject").html("<strong> Thank You! </strong> &nbsp;&nbsp; Your project is being uploaded. Please wait...");
                 $("#alertproject").css("display","block");
                 $("#alertproject").hide();
                 $("#alertproject").fadeIn(800);

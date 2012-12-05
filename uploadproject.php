@@ -34,7 +34,7 @@
      <div id="uploadProjectCenter" class="span2">
           <br><br>  <br><br> <br><br>
           <button class="btn btn-primary" id="uploadproject">Upload</button><br>
-          <img src='img/uploading.gif'style="display:none;margin-top:10px;margin-left: -25px;" id="loader"/>
+          <img src='img/uploading1.gif'style="display:none;margin-top:5px;margin-left: -8px;" id="loader"/>
      </div><!-- End UploadProjectCenter div -->
      <div id="uploadProjectRight" class="span4" >
      <label><span style="color:red;"><sup>* </sup></span>Snapshots</label>
