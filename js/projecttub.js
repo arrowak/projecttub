@@ -67,7 +67,7 @@ $(document).ready(function(){
 
    });
    
-   $("#uploadproject").click(function(){
+   $("#uploadproject").live('click',function(){
      
        var fname = $("#projectfile").val();
        var projectname = $("#name").val();
@@ -98,14 +98,21 @@ $(document).ready(function(){
                 $("#alertproject").fadeIn(800);               
            }
       else{
-                $("#alertproject").attr("class","alert alert-success");
+                $("#alertproject").attr("class","alert alert-info");
                 $("#alertproject").html("<strong> Thank You! </strong> &nbsp;&nbsp; Your project is being uploaded. Please wait...");
                 $("#alertproject").css("display","block");
                 $("#alertproject").hide();
                 $("#alertproject").fadeIn(800);
                 $("#loader").css("display","block").fadeIn(800);
-          // $("#projectfile").attr('class','');
-      }
+                
+                var projectfile = $("#projectfile").val();
+                console.log(projectfile);
+                $("#newproject").ajaxForm(
+                {
+                    target: '#alertproject'
+                }).submit();
+                $("#loader").css("display","none").fadeOut(800);
+          }
        
        return false;
    });
