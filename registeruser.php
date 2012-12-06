@@ -10,14 +10,8 @@ $college = $_POST["txtcollege"];
 $course = $_POST["txtcourse"];
 $year = $_POST["txtyear"];
 
-$server = "localhost:3306";
-$username = "root";
-$pass = "";
-$database = "projecttub";
-
 try {
-$con = mysql_connect($server, $username, $pass);
-mysql_select_db($database);
+include 'connectDB.php';
 $statement = "INSERT INTO users (name,emailid,password,college,course,year) VALUES ('$name','$email','$password','$college','$course','$year')";
 
 $result = mysql_query($statement);
