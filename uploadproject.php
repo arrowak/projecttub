@@ -4,6 +4,7 @@
 <link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css">
 <link rel = "stylesheet" type = "text/css" href = "css/style.css">
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
 <script type="text/javascript" src="js/projecttub.js"></script>
 </head>
 <header>
@@ -14,13 +15,13 @@
 <body>  
 <div class="container" id="mainWrapper">
 <div class="uploadProjectWrapper">
-<form id="newproject">
+    <form id="newproject" action="uploadFile.php" method="post" enctype="multipart/form-data">
   <fieldset>
     <legend>New Project</legend><br>
     <div id="newprojectcontent" class="well">
       <div id="uploadProjectLeft" class="span4">
      <label><span style="color:red;"><sup>* </sup></span>Name</label>
-     <input type="text" id="name" placeholder="project name">
+     <input type="text" id="name" placeholder="project name" name="name">
      <br><br>
      <label>Category</label>
      <select id="projectcategory">
@@ -29,7 +30,7 @@
      </select>
      <br><br>
         <label><span style="color:red;"><sup>* </sup></span>Project File (.zip)</label>
-        <input type="file" accept="application/zip" id="projectfile" value="Choose a zip file" placeholder="Choose a zip file">
+        <input type="file" accept="application/zip" id="projectfile" value="Choose a zip file" placeholder="Choose a zip file" name="projectfile">
      </div> <!-- End UploadProjectLeft div -->
      <div id="uploadProjectCenter" class="span2">
           <br><br>  <br><br> <br><br>
