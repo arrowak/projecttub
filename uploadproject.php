@@ -24,9 +24,9 @@
      <input type="text" id="name" placeholder="project name" name="name">
      <br><br>
      <label>Category</label>
-     <select id="projectcategory">
-        <option value="standalone" class="selected">Standalone Application</option>
-        <option value="web">Web Application</option>
+     <select id="projectcategory" name="projectcategory">
+        <option value="Standalone Application" class="selected">Standalone Application</option>
+        <option value="Web Application">Web Application</option>
      </select>
      <br><br>
         <label><span style="color:red;"><sup>* </sup></span>Project File (.zip)</label>
@@ -40,11 +40,11 @@
      <div id="uploadProjectRight" class="span4" >
      <label><span style="color:red;"><sup>* </sup></span>Snapshots</label>
      <br>
-     <input type="file" accept="image/*" id="snapshot1" placeholder="Choose a file">
+        <input type="file" accept="image/*" id="snapshot1" name ="snapshot1" placeholder="Choose a file">
      <br><br>
-        <input type="file" accept="image/*" id="snapshot2" placeholder="Choose a file">
+        <input type="file" accept="image/*" id="snapshot2" name ="snapshot2" placeholder="Choose a file">
      <br><br>
-        <input type="file" accept="image/*" id="snapshot3" placeholder="Choose a file">   
+        <input type="file" accept="image/*" id="snapshot3" name ="snapshot3" placeholder="Choose a file">   
      </div> <!-- End UploadProjectRight div -->  
        <div id="alertproject" class="" style="display:none;margin-top: 300px;">
           </div>
